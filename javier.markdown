@@ -5,7 +5,7 @@ permalink: /javier.html
 ---
 
 <div style="display: flex; align-items: center; gap: 2rem; margin-bottom: 2rem;">
-  <img src="{{ '/assets/img/avatar2.jpg' | relative_url }}" onerror="this.src='https://api.dicebear.com/7.x/avataaars/svg?seed=Javi'" style="width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--accent); object-fit: cover;">
+  <img src="{{ '/assets/img/Javi.webp' | relative_url }}" onerror="this.src='https://api.dicebear.com/7.x/avataaars/svg?seed=Javi'" style="width: 150px; height: 150px; border-radius: 50%; border: 4px solid var(--accent); object-fit: cover;">
   <div>
     <h1 style="margin: 0;">¡Hola! Soy Javier Campuzano García 👋</h1>
     <p style="font-size: 1.2rem; color: var(--text-secondary); margin: 0.5rem 0 0;">Ingeniero de Software y Tecnologías de la Información</p>
