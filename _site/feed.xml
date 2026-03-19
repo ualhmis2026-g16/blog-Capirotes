@@ -1,4 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/blog-Capirotes/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog-Capirotes/" rel="alternate" type="text/html" /><updated>2026-03-19T13:54:04+01:00</updated><id>http://localhost:4000/blog-Capirotes/feed.xml</id><title type="html">El CapiBlogTe</title><subtitle>Bienvenido al capiBlogTe donde nuestro equipo (Capirotes) compartirá guías e información útil.</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/blog-Capirotes/jekyll/update/2026/03/16/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2026-03-16T11:11:59+01:00</published><updated>2026-03-16T11:11:59+01:00</updated><id>http://localhost:4000/blog-Capirotes/jekyll/update/2026/03/16/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/blog-Capirotes/jekyll/update/2026/03/16/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/blog-Capirotes/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog-Capirotes/" rel="alternate" type="text/html" /><updated>2026-03-19T14:04:47+01:00</updated><id>http://localhost:4000/blog-Capirotes/feed.xml</id><title type="html">El CapiBlogTe</title><subtitle>Bienvenido al capiBlogTe donde nuestro equipo (Capirotes) compartirá guías e información útil.</subtitle><entry><title type="html">Mejores prácticas para el control de versiones con Git</title><link href="http://localhost:4000/blog-Capirotes/git/software-engineering/2026/03/19/mejores-practicas-git.html" rel="alternate" type="text/html" title="Mejores prácticas para el control de versiones con Git" /><published>2026-03-19T13:55:00+01:00</published><updated>2026-03-19T13:55:00+01:00</updated><id>http://localhost:4000/blog-Capirotes/git/software-engineering/2026/03/19/mejores-practicas-git</id><content type="html" xml:base="http://localhost:4000/blog-Capirotes/git/software-engineering/2026/03/19/mejores-practicas-git.html"><![CDATA[<p>El control de versiones es el corazón de cualquier proyecto de software moderno. No se trata solo de “guardar cambios”, sino de gestionar la evolución del código de manera que el equipo pueda colaborar sin fricciones. Aquí te presento las mejores prácticas para dominar Git.</p>
+
+<h2 id="1-commits-atómicos-y-significativos">1. Commits Atómicos y Significativos</h2>
+<p>Un buen commit debe representar una única unidad de cambio (un bug corregido, una nueva funcionalidad, una refactorización).</p>
+
+<ul>
+  <li><strong>Mensajes Claros</strong>: Evita mensajes como “fix” o “cambios”. Usa el modo imperativo: <code class="language-plaintext highlighter-rouge">"Añadir validación de email al formulario de registro"</code>.</li>
+  <li><strong>Divide y vencerás</strong>: Si has cambiado 10 archivos que no tienen nada que ver entre sí, divide esos cambios en varios commits.</li>
+</ul>
+
+<h2 id="2-estrategias-de-ramas-branching">2. Estrategias de Ramas (Branching)</h2>
+<p>Nunca trabajes directamente sobre <code class="language-plaintext highlighter-rouge">main</code> o <code class="language-plaintext highlighter-rouge">master</code>. Utiliza una estrategia de ramas que se adapte a tu equipo:</p>
+
+<ul>
+  <li><strong>Feature Branching</strong>: Una rama por cada tarea o funcionalidad.</li>
+  <li><strong>GitFlow</strong>: Para proyectos más complejos con ciclos de lanzamiento definidos.</li>
+  <li><strong>GitHub Flow</strong>: Un flujo más simple y ágil basado en Pull Requests constantes a una rama principal siempre estable.</li>
+</ul>
+
+<h2 id="3-mantén-tu-repositorio-limpio">3. Mantén tu repositorio limpio</h2>
+<p>Antes de subir tus cambios, asegúrate de que el código esté limpio:</p>
+
+<ul>
+  <li><strong>Usa .gitignore</strong>: No subas carpetas como <code class="language-plaintext highlighter-rouge">node_modules</code>, archivos de configuración local (IDE) o binarios compilados.</li>
+  <li><strong>Revisa antes de hacer commit</strong>: Usa <code class="language-plaintext highlighter-rouge">git diff</code> o las herramientas de tu IDE para ver exactamente qué estás a punto de confirmar.</li>
+</ul>
+
+<h2 id="4-la-regla-de-oro">4. La Regla de Oro</h2>
+<blockquote>
+  <p><strong>Nunca hagas push de código que no compile o que rompa los tests.</strong></p>
+</blockquote>
+
+<p>La rama principal debe ser sagrada. Cada vez que integras algo, debe estar verificado.</p>
+
+<hr />
+
+<p>Dominar Git lleva tiempo, pero seguir estas pautas hará que tu vida (y la de tus compañeros) sea mucho más fácil. ¡Feliz coding!</p>]]></content><author><name>Javier</name></author><category term="git" /><category term="software-engineering" /><summary type="html"><![CDATA[El control de versiones es el corazón de cualquier proyecto de software moderno. No se trata solo de “guardar cambios”, sino de gestionar la evolución del código de manera que el equipo pueda colaborar sin fricciones. Aquí te presento las mejores prácticas para dominar Git.]]></summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/blog-Capirotes/jekyll/update/2026/03/16/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2026-03-16T11:11:59+01:00</published><updated>2026-03-16T11:11:59+01:00</updated><id>http://localhost:4000/blog-Capirotes/jekyll/update/2026/03/16/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/blog-Capirotes/jekyll/update/2026/03/16/welcome-to-jekyll.html"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
 
 <p>Jekyll requires blog post files to be named according to the following format:</p>
 
