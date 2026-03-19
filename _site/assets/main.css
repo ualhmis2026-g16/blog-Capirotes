@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Reset some basic elements
  */
@@ -644,6 +645,118 @@ table td {
 }
 .highlight .il {
   color: #099;
+}
+
+/* Importa nuestros estilos oscuros personalizados */
+/* Estilos Generales - Tema Oscuro (Ingeniería Informática) */
+:root {
+  --bg-color: #0f172a; /* Fondo principal */
+  --bg-card: #1e293b; /* Fondo de tarjetas */
+  --text-primary: #f8fafc; /* Texto principal brillante */
+  --text-secondary: #94a3b8; /* Texto secundario atenuado */
+  --accent: #3b82f6; /* Azul tech */
+  --accent-hover: #60a5fa; /* Azul claro al pasar el ratón */
+  --border-color: #334155; /* Bordes sutiles */
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  margin: 0;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.3s ease;
+}
+
+h1, h2, h3 {
+  color: var(--text-primary);
+  margin-top: 0;
+}
+
+/* Tarjeta Introductoria */
+.mi-clase-personalizada {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+}
+
+.mi-clase-personalizada h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.025em;
+}
+
+.mi-clase-personalizada p {
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+/* Títulos de Sección */
+h2 {
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+}
+
+/* Lista de Miembros */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+li {
+  background-color: var(--bg-card);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--accent);
+  transition: all 0.2s ease-in-out;
+}
+
+li:hover {
+  transform: translateX(8px);
+  border-left-color: var(--accent-hover);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.member-link {
+  display: block;
+  padding: 1.25rem 1.5rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 1.15rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.member-link:hover {
+  color: var(--accent-hover);
+}
+
+/* Detalle Pixel/Código (Letras especiales) */
+.capirote-pixel {
+  font-family: var(--font-mono);
+  color: var(--accent);
+  font-size: 1.25rem;
+  font-weight: bold;
+  background-color: rgba(59, 130, 246, 0.1); /* Resaltado tenue */
+  padding: 0.1rem 0.25rem;
+  border-radius: 4px;
 }
 
 /*# sourceMappingURL=main.css.map */
