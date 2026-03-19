@@ -1,0 +1,7 @@
+{
+  "name": "blog-equipo",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "echo 'Servidor listo'"
+  }
+}
