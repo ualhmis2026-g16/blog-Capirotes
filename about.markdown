@@ -35,5 +35,7 @@ Aquí puedes conocer a los integrantes y contactar con nosotros:
 
 </div>
 
+{% include formulario-contacto.html %}
+
 ---
 [Volver al Inicio]({{ site.baseurl }}/)

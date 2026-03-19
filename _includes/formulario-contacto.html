@@ -1,0 +1,27 @@
+<div style="margin-top: 30px; padding: 25px; border: 1px solid #e1e4e8; border-radius: 12px; background-color: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+  <h3 style="text-align: center; color: #24292e; margin-bottom: 20px;">📩 Contacta con el equipo</h3>
+  
+  <form action="https://formspree.io/f/xwvryoob" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+    
+    <div style="display: flex; flex-direction: column;">
+      <label style="font-weight: 600; margin-bottom: 8px; color: #444;">Tu nombre:</label>
+      <input type="text" name="name" placeholder="Ej: Víctor Granero" required style="padding: 12px; border: 1px solid #d1d5da; border-radius: 6px; font-size: 14px;">
+    </div>
+
+    <div style="display: flex; flex-direction: column;">
+      <label style="font-weight: 600; margin-bottom: 8px; color: #444;">Tu correo (UAL):</label>
+      <input type="email" name="_replyto" placeholder="ejemplo@inlumine.ual.es" required style="padding: 12px; border: 1px solid #d1d5da; border-radius: 6px; font-size: 14px;">
+    </div>
+
+    <div style="display: flex; flex-direction: column;">
+      <label style="font-weight: 600; margin-bottom: 8px; color: #444;">Mensaje para los Capirotes:</label>
+      <textarea name="message" rows="5" placeholder="¿En qué podemos ayudarte?" required style="padding: 12px; border: 1px solid #d1d5da; border-radius: 6px; font-size: 14px; resize: vertical;"></textarea>
+    </div>
+
+    <input type="text" name="_gotcha" style="display:none" />
+
+    <button type="submit" style="background-color: #2ea44f; color: white; padding: 12px; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; font-weight: bold; transition: background 0.3s;">
+      Enviar Formulario
+    </button>
+  </form>
+</div>
