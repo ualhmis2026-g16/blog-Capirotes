@@ -36,33 +36,79 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <link rel="stylesheet" href="/blog-Capirotes/assets/main.css">
-
-
-<section class="mi-clase-personalizada">
+        <!-- Hero Section: Bienvenida -->
+<section class="hero-section">
     <h1>Bienvenido al CapiBlôgTe</h1>
-    <p>Aquí encontrarás guías y consejos por parte de nuestro equipo</p>
+    <p>Guías, reflexiones y consejos técnicos de nuestro equipo de ingeniería.</p>
 </section>
 
-<h2>Miembros del equipo</h2>
+<div class="home-layout">
 
-<ul>
-    <li>
-        <a class="member-link" href="juanfran.html">
-            Juan Francisco Escobosa Brocal
-        </a>
-    </li>
-    <li>
-        <a class="member-link" href="javier.html">
-            Javier Campuzano García
-        </a>
-    </li>
-    <li>
-        <a class="member-link" href="victor.html">
-            Victor Granero Reche
-        </a>
-    </li>
-</ul>
+    <!-- COLUMNA IZQUIERDA: Miembros del Equipo (30%) -->
+    <aside class="members-column">
+        <h2>Nuestro Equipo</h2>
+        <div class="members-list">
+
+            <!-- Miembro 1 -->
+            <a href="#" class="member-card"> <!-- Sustituye '#' por 'juanfran.html' -->
+                <!-- Para poner tu foto: sube el archivo a 'assets/img/tu-foto.jpg' y cambia el src de abajo -->
+                <img src="/blog-Capirotes/assets/img/avatar1.jpg" onerror="this.src='https://api.dicebear.com/7.x/avataaars/svg?seed=JF'" alt="Juan" class="member-photo">
+                <div class="member-info">
+                    <h3>Juan Francisco E.</h3>
+                    <p>Especialista en desarrollo backend y sistemas distribuidos.</p>
+                </div>
+            </a>
+
+            <!-- Miembro 2 -->
+            <a href="#" class="member-card"> <!-- Sustituye '#' por 'javier.html' -->
+                <!-- Para poner tu foto: sube el archivo a 'assets/img/tu-foto.jpg' y cambia el src de abajo -->
+                <img src="/blog-Capirotes/assets/img/avatar2.jpg" onerror="this.src='https://api.dicebear.com/7.x/avataaars/svg?seed=Javi'" alt="Javier" class="member-photo">
+                <div class="member-info">
+                    <h3>Javier Campuzano</h3>
+                    <p>Apasionado del desarrollo frontend y la ingeniería de software.</p>
+                </div>
+            </a>
+
+            <!-- Miembro 3 -->
+            <a href="#" class="member-card"> <!-- Sustituye '#' por 'victor.html' -->
+                <!-- Para poner tu foto: sube el archivo a 'assets/img/tu-foto.jpg' y cambia el src de abajo -->
+                <img src="/blog-Capirotes/assets/img/avatar3.jpg" onerror="this.src='https://api.dicebear.com/7.x/avataaars/svg?seed=Victor'" alt="Victor" class="member-photo">
+                <div class="member-info">
+                    <h3>Víctor Granero</h3>
+                    <p>Interesado en ciberseguridad y gestión de proyectos IT.</p>
+                </div>
+            </a>
+
+        </div>
+    </aside>
+
+    <!-- COLUMNA DERECHA: Feed de Entradas (70%) -->
+    <main class="blog-column">
+        <h2>Últimas entradas</h2>
+
+        <div class="blog-feed">
+            
+            <article class="post-card">
+                <div class="post-meta">
+                    <span>Mar 16, 2026</span>
+                    <span>•</span>
+                    <span>Por Capirotes</span>
+                </div>
+                <div class="post-title">
+                    <h3><a href="/blog-Capirotes/jekyll/update/2026/03/16/welcome-to-jekyll.html">Welcome to Jekyll!</a></h3>
+                </div>
+                <div class="post-excerpt">
+                    You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways,...
+                </div>
+                <a href="/blog-Capirotes/jekyll/update/2026/03/16/welcome-to-jekyll.html" class="read-more-btn">Leer más</a>
+            </article>
+            
+
+            
+        </div>
+    </main>
+
+</div>
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/blog-Capirotes/"></data>

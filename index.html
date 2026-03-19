@@ -3,30 +3,78 @@ layout: default
 title: Inicio - El CapiBlogTe
 ---
 
-<link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
-
-
-<section class="mi-clase-personalizada">
+<!-- Hero Section: Bienvenida -->
+<section class="hero-section">
     <h1>Bienvenido al CapiBlôgTe</h1>
-    <p>Aquí encontrarás guías y consejos por parte de nuestro equipo</p>
+    <p>Guías, reflexiones y consejos técnicos de nuestro equipo de ingeniería.</p>
 </section>
 
-<h2>Miembros del equipo</h2>
+<div class="home-layout">
 
-<ul>
-    <li>
-        <a class="member-link" href="juanfran.html">
-            Juan Francisco Escobosa Brocal
-        </a>
-    </li>
-    <li>
-        <a class="member-link" href="javier.html">
-            Javier Campuzano García
-        </a>
-    </li>
-    <li>
-        <a class="member-link" href="victor.html">
-            Victor Granero Reche
-        </a>
-    </li>
-</ul>
+    <!-- COLUMNA IZQUIERDA: Miembros del Equipo (30%) -->
+    <aside class="members-column">
+        <h2>Nuestro Equipo</h2>
+        <div class="members-list">
+
+            <!-- Miembro 1 -->
+            <a href="#" class="member-card"> <!-- Sustituye '#' por 'juanfran.html' -->
+                <!-- Para poner tu foto: sube el archivo a 'assets/img/tu-foto.jpg' y cambia el src de abajo -->
+                <img src="{{ '/assets/img/avatar1.jpg' | relative_url }}" onerror="this.src='https://api.dicebear.com/7.x/avataaars/svg?seed=JF'" alt="Juan" class="member-photo">
+                <div class="member-info">
+                    <h3>Juan Francisco E.</h3>
+                    <p>Especialista en desarrollo backend y sistemas distribuidos.</p>
+                </div>
+            </a>
+
+            <!-- Miembro 2 -->
+            <a href="#" class="member-card"> <!-- Sustituye '#' por 'javier.html' -->
+                <!-- Para poner tu foto: sube el archivo a 'assets/img/tu-foto.jpg' y cambia el src de abajo -->
+                <img src="{{ '/assets/img/avatar2.jpg' | relative_url }}" onerror="this.src='https://api.dicebear.com/7.x/avataaars/svg?seed=Javi'" alt="Javier" class="member-photo">
+                <div class="member-info">
+                    <h3>Javier Campuzano</h3>
+                    <p>Apasionado del desarrollo frontend y la ingeniería de software.</p>
+                </div>
+            </a>
+
+            <!-- Miembro 3 -->
+            <a href="#" class="member-card"> <!-- Sustituye '#' por 'victor.html' -->
+                <!-- Para poner tu foto: sube el archivo a 'assets/img/tu-foto.jpg' y cambia el src de abajo -->
+                <img src="{{ '/assets/img/avatar3.jpg' | relative_url }}" onerror="this.src='https://api.dicebear.com/7.x/avataaars/svg?seed=Victor'" alt="Victor" class="member-photo">
+                <div class="member-info">
+                    <h3>Víctor Granero</h3>
+                    <p>Interesado en ciberseguridad y gestión de proyectos IT.</p>
+                </div>
+            </a>
+
+        </div>
+    </aside>
+
+    <!-- COLUMNA DERECHA: Feed de Entradas (70%) -->
+    <main class="blog-column">
+        <h2>Últimas entradas</h2>
+
+        <div class="blog-feed">
+            {% for post in site.posts %}
+            <article class="post-card">
+                <div class="post-meta">
+                    <span>{{ post.date | date: "%b %d, %Y" }}</span>
+                    <span>•</span>
+                    <span>Por {{ post.author | default: "Capirotes" }}</span>
+                </div>
+                <div class="post-title">
+                    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                </div>
+                <div class="post-excerpt">
+                    {{ post.excerpt | strip_html | truncatewords: 30 }}
+                </div>
+                <a href="{{ post.url | relative_url }}" class="read-more-btn">Leer más</a>
+            </article>
+            {% endfor %}
+
+            {% if site.posts.size == 0 %}
+            <p>Aún no hay entradas publicadas. ¡Pronto habrá contenido nuevo!</p>
+            {% endif %}
+        </div>
+    </main>
+
+</div>
