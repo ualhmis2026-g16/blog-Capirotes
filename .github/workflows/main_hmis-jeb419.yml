@@ -10,27 +10,26 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: '3.2'
-          # Eliminamos el bundler-cache para evitar el error del Gemfile.lock
-          bundler-cache: false 
+          bundler-cache: false
 
       - name: Build with Jekyll
         run: |
           gem install jekyll bundler
-          # Este comando ignora los problemas de plataforma de tu PC
-          bundle install || bundle update 
-          jekyll build --baseurl "" [cite: 51]
+          bundle install || bundle update
+          bundle exec jekyll build --baseurl "" 
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: node-app
-          [cite_start]path: ./_site # Jekyll genera la web aquí [cite: 25]
+          [cite_start]path: ./_site [cite: 25]
 
   deploy:
     runs-on: ubuntu-latest
@@ -38,13 +37,12 @@ jobs:
     permissions:
       id-token: write
       contents: read
-
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
           name: node-app
-      
+
       - name: Login to Azure
         uses: azure/login@v2
         with:
