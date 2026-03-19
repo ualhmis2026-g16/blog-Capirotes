@@ -48,3 +48,7 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# Configuraciones de compilación para ocultar "Deprecation Warnings" antiguos
+sass:
+  quiet_deps: true
