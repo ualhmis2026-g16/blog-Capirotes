@@ -1,4 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/blog-Capirotes/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog-Capirotes/" rel="alternate" type="text/html" /><updated>2026-03-19T14:04:47+01:00</updated><id>http://localhost:4000/blog-Capirotes/feed.xml</id><title type="html">El CapiBlogTe</title><subtitle>Bienvenido al capiBlogTe donde nuestro equipo (Capirotes) compartirá guías e información útil.</subtitle><entry><title type="html">Mejores prácticas para el control de versiones con Git</title><link href="http://localhost:4000/blog-Capirotes/git/software-engineering/2026/03/19/mejores-practicas-git.html" rel="alternate" type="text/html" title="Mejores prácticas para el control de versiones con Git" /><published>2026-03-19T13:55:00+01:00</published><updated>2026-03-19T13:55:00+01:00</updated><id>http://localhost:4000/blog-Capirotes/git/software-engineering/2026/03/19/mejores-practicas-git</id><content type="html" xml:base="http://localhost:4000/blog-Capirotes/git/software-engineering/2026/03/19/mejores-practicas-git.html"><![CDATA[<p>El control de versiones es el corazón de cualquier proyecto de software moderno. No se trata solo de “guardar cambios”, sino de gestionar la evolución del código de manera que el equipo pueda colaborar sin fricciones. Aquí te presento las mejores prácticas para dominar Git.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.4">Jekyll</generator><link href="http://localhost:4000/blog-Capirotes/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/blog-Capirotes/" rel="alternate" type="text/html" /><updated>2026-03-21T13:02:38+01:00</updated><id>http://localhost:4000/blog-Capirotes/feed.xml</id><title type="html">El CapiBlogTe</title><subtitle>Bienvenido al capiBlogTe donde nuestro equipo (Capirotes) compartirá guías e información útil.</subtitle><entry><title type="html">Guía Práctica: Domina el flujo de trabajo en GitLab</title><link href="http://localhost:4000/blog-Capirotes/gitlab/tutorial/2026/03/20/tutorial-de-git.html" rel="alternate" type="text/html" title="Guía Práctica: Domina el flujo de trabajo en GitLab" /><published>2026-03-20T10:00:00+01:00</published><updated>2026-03-20T10:00:00+01:00</updated><id>http://localhost:4000/blog-Capirotes/gitlab/tutorial/2026/03/20/tutorial-de-git</id><content type="html" xml:base="http://localhost:4000/blog-Capirotes/gitlab/tutorial/2026/03/20/tutorial-de-git.html"><![CDATA[<p>GitLab es una herramienta esencial para la colaboración en ingeniería. [cite_start]En este tutorial práctico, aprenderás desde configurar tu acceso hasta integrar cambios mediante Merge Requests[cite: 1, 2].</p>
+
+<h2 id="-paso-1-configura-tu-llave-ssh">🔑 Paso 1: Configura tu llave SSH</h2>
+<p>[cite_start]Para conectar tu ordenador con GitLab de forma segura y sin pedir contraseña constantemente, usaremos llaves SSH[cite: 12].</p>
+
+<ol>
+  <li><strong>Genera la llave</strong>: Abre una terminal y ejecuta:<br />
+[cite_start]<code class="language-plaintext highlighter-rouge">ssh-keygen -t ed25519 -C "tu-email@example.com"</code>[cite: 13].</li>
+  <li>[cite_start]<strong>Copia la clave pública</strong>: Usa el comando <code class="language-plaintext highlighter-rouge">type %USERPROFILE%\.ssh\id_ed25519.pub</code> (en Windows) y copia el contenido[cite: 14].</li>
+  <li>[cite_start]<strong>Añádela a GitLab</strong>: Ve a <em>User Settings</em> -&gt; <em>SSH Keys</em> y pega tu clave[cite: 15].</li>
+</ol>
+
+<h2 id="-paso-2-clonar-y-preparar-el-proyecto">📥 Paso 2: Clonar y Preparar el Proyecto</h2>
+<p>[cite_start]Una vez configurado Git con tu nombre y correo[cite: 20], es hora de traer el código a tu máquina:</p>
+
+<ul>
+  <li>[cite_start]<strong>Clonar</strong>: Usa <code class="language-plaintext highlighter-rouge">git clone</code> seguido de la URL SSH de tu repositorio[cite: 24].</li>
+  <li>[cite_start]<strong>Sincronizar</strong>: Entra en la carpeta y asegúrate de estar en la rama correcta con <code class="language-plaintext highlighter-rouge">git checkout tutorial</code> seguido de un <code class="language-plaintext highlighter-rouge">git pull</code>[cite: 25].</li>
+</ul>
+
+<h2 id="-el-ciclo-de-trabajo-diario">🚀 El Ciclo de Trabajo Diario</h2>
+<p>[cite_start]Para mantener el proyecto organizado, seguimos este flujo constante[cite: 70]:</p>
+
+<h3 id="1-crear-una-rama-branch">1. Crear una Rama (Branch)</h3>
+<p>Nunca trabajes directamente en la rama principal. Crea una rama propia para tus tareas:
+[cite_start]<code class="language-plaintext highlighter-rouge">git branch mi-rama</code> y luego <code class="language-plaintext highlighter-rouge">git checkout mi-rama</code>[cite: 49, 50].</p>
+
+<h3 id="2-guardar-cambios-commit--push">2. Guardar Cambios (Commit &amp; Push)</h3>
+<p>Cuando termines una tarea, guarda tus progresos:</p>
+<ul>
+  <li>[cite_start]<code class="language-plaintext highlighter-rouge">git add .</code> (prepara los archivos)[cite: 35].</li>
+  <li>[cite_start]<code class="language-plaintext highlighter-rouge">git commit -m "Descripción clara del cambio"</code>[cite: 36, 71].</li>
+  <li>[cite_start]<code class="language-plaintext highlighter-rouge">git push origin mi-rama</code> (sube tus cambios a la nube)[cite: 53].</li>
+</ul>
+
+<h3 id="3-mantenerse-actualizado-pull">3. Mantenerse Actualizado (Pull)</h3>
+<p>Antes de empezar a trabajar, descarga siempre los cambios de tus compañeros para evitar conflictos:
+[cite_start]<code class="language-plaintext highlighter-rouge">git pull origin tutorial</code>[cite: 44, 72].</p>
+
+<h2 id="-paso-final-el-merge-request">🤝 Paso Final: El Merge Request</h2>
+<p>[cite_start]Cuando tu trabajo en la rama esté listo, es hora de unirlo al proyecto principal[cite: 65]:</p>
+
+<ol>
+  <li>[cite_start]Ve a <strong>Merge Requests</strong> en GitLab y crea uno nuevo[cite: 66].</li>
+  <li>[cite_start]Selecciona tu rama como <em>Source</em> y <code class="language-plaintext highlighter-rouge">tutorial</code> como <em>Target</em>[cite: 66].</li>
+  <li>[cite_start]<strong>Revisión</strong>: Asegúrate de marcar la opción de borrar tu rama personal tras el merge para mantener el repositorio limpio[cite: 67, 72].</li>
+</ol>
+
+<hr />
+
+<blockquote>
+  <p>[cite_start]<strong>💡 Consejo</strong>: Haz commits a menudo (por ejemplo, después de cada sesión de laboratorio) para seguir mejor tu progreso[cite: 73].</p>
+</blockquote>
+
+<p>¿Tienes dudas? [cite_start]No dudes en contactar conmigo o con cualquier miembro del equipo <strong>ENG</strong> durante las horas de prácticas[cite: 10]. ¡A darle caña al código!</p>]]></content><author><name>Victor</name></author><category term="gitlab" /><category term="tutorial" /><summary type="html"><![CDATA[GitLab es una herramienta esencial para la colaboración en ingeniería. [cite_start]En este tutorial práctico, aprenderás desde configurar tu acceso hasta integrar cambios mediante Merge Requests[cite: 1, 2].]]></summary></entry><entry><title type="html">Mejores prácticas para el control de versiones con Git</title><link href="http://localhost:4000/blog-Capirotes/git/software-engineering/2026/03/19/mejores-practicas-git.html" rel="alternate" type="text/html" title="Mejores prácticas para el control de versiones con Git" /><published>2026-03-19T13:55:00+01:00</published><updated>2026-03-19T13:55:00+01:00</updated><id>http://localhost:4000/blog-Capirotes/git/software-engineering/2026/03/19/mejores-practicas-git</id><content type="html" xml:base="http://localhost:4000/blog-Capirotes/git/software-engineering/2026/03/19/mejores-practicas-git.html"><![CDATA[<p>El control de versiones es el corazón de cualquier proyecto de software moderno. No se trata solo de “guardar cambios”, sino de gestionar la evolución del código de manera que el equipo pueda colaborar sin fricciones. Aquí te presento las mejores prácticas para dominar Git.</p>
 
 <h2 id="1-commits-atómicos-y-significativos">1. Commits Atómicos y Significativos</h2>
 <p>Un buen commit debe representar una única unidad de cambio (un bug corregido, una nueva funcionalidad, una refactorización).</p>
